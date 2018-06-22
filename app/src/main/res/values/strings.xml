@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">StackO TopUser</string>
+    <string name="online">You are on line!</string>
+    <string name="no_connection">Showing local results</string>
+    <string name="noreposfound">No data to show</string>
+    <string name="reposfound">Showing %1$s results</string>
+
+    <string name="reputation">Reputation score: %1$s</string>
+    <string name="location">Location: %1$s</string>
+    <string name="creation_date">Creation date: %1$s</string>
+    <string name="user_id">User ID: %1$s</string>
+
+    <string name="locked">Locked</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="item_blocked">This item is locked! Unlock it to see its details</string>
+</resources>
