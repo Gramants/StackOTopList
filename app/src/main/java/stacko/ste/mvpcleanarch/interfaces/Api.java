@@ -10,7 +10,7 @@ public interface Api {
 
 
     @GET("/2.2/users")
-    Call<TopUsersResponse> getTopUsers(
+    Observable<TopUsersResponse> getTopUsers(
             @Query("order") String orderBy,
             @Query("sort") String sortBy,
             @Query("site") String siteName,
