@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:orientation="vertical"
+        android:background="@color/follow"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_reputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+             />
+
+
+
+        <com.github.angads25.toggle.LabeledSwitch
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            app:textOn="@string/follow"
+            app:textOff="@string/unfollow"
+            app:colorBorder="@color/colorAccent"/>
+
+        <com.github.angads25.toggle.LabeledSwitch
+            android:id="@+id/blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="10sp"
+            app:textOn="@string/locked"
+            app:textOff="@string/unlocked"
+            app:colorBorder="@color/colorAccent"/>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

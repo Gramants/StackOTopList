@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "stacko.ste.mvpcleanarch"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1"
+        testInstrumentationRunner "stacko.ste.mvpcleanarch.EspressoRunner"
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+
+}
+
+def getInstrumentation() {
+    buildProperties.cli.keys.toList().contains('cucumber') ? 'com.tobi.movies.utils.CucumberInstrumentation' : 'com.tobi.movies.runner.DaggerOverridesTestRunner'
+}
+dependencies {
+
+
+    ext {
+        arch="1.1.1"
+        archroom="1.1.1"
+        retrofit="2.3.0"
+        constraints_layout = "1.0.2"
+        support_lib = "28.0.0"
+        gson = "2.8.0"
+        junit = "4.12"
+        dagger = "2.12"
+        okhttp3 = "3.11.0"
+        butterknife="8.5.1"
+        rxandroid="2.0.1"
+        mockito="2.17.0"
+        hamcrest="1.3"
+        androidrunner="1.0.1"
+        androidxLibVersion = "1.0.0"
+        coreVersion = "1.0.0"
+        extJUnitVersion = "1.0.0"
+        runnerVersion = "1.1.0"
+        espressoVersion = "3.1.0"
+    }
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    // UI
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation "com.android.support:design:${support_lib}"
+    implementation "com.android.support.constraint:constraint-layout:${constraints_layout}"
+    implementation "com.android.support:support-media-compat:28.0.0"
+    implementation "com.android.support:recyclerview-v7:${support_lib}"
+    implementation "com.android.support:support-v4:${support_lib}"
+    implementation "com.github.angads25:toggle:1.0.0"
+    api "com.android.support:cardview-v7:${support_lib}"
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
+
+    // gson e junit
+    implementation "com.google.code.gson:gson:${gson}"
+    testImplementation "junit:junit:${junit}"
+
+    // dagger
+    implementation "com.google.dagger:dagger:${dagger}"
+    implementation "com.google.dagger:dagger-android-support:${dagger}"
+    annotationProcessor "com.google.dagger:dagger-android-processor:${dagger}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${dagger}"
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:${retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit}"
+
+    // rxjava2 and okhttp3
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroid}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okhttp3}"
+    implementation "com.squareup.okhttp3:okhttp:${okhttp3}"
+
+
+    // Arch components
+    implementation "android.arch.lifecycle:extensions:${arch}"
+    implementation "android.arch.lifecycle:runtime:${arch}"
+    annotationProcessor "android.arch.lifecycle:common-java8:${arch}"
+    implementation "android.arch.persistence.room:runtime:${archroom}"
+    implementation "android.arch.persistence.room:compiler:${archroom}"
+    implementation "android.arch.persistence.room:rxjava2:${archroom}"
+
+    // Butterknife
+    implementation "com.jakewharton:butterknife:${butterknife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterknife}"
+
+    // Dependencies for local unit tests
+    testImplementation "junit:junit:${junit}"
+    testImplementation "org.hamcrest:hamcrest-all:${hamcrest}"
+    testImplementation "org.mockito:mockito-core:${mockito}"
+
+
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+
+
+
+    testImplementation 'org.hamcrest:hamcrest-library:1.3'
+    androidTestImplementation ('com.android.support.test:runner:0.5'){
+        exclude module: 'support-annotations'
+    }
+
+    // Set this dependency to use JUnit 4 rules
+    androidTestImplementation ('com.android.support.test:rules:0.5'){
+        exclude module: 'support-annotations'
+    }
+
+    // Set this dependency to build and run Espresso tests
+    androidTestImplementation ('com.android.support.test.espresso:espresso-core:2.2.2'){
+        exclude module: 'support-annotations'
+    }
+
+
+
+    //MOCKSERVER
+    androidTestImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+    implementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+
+
+}
+repositories {
+    mavenCentral()
+    google()
+}
