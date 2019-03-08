@@ -18,11 +18,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import stacko.ste.mvpcleanarch.domain.InteractorImpl;
-import stacko.ste.mvpcleanarch.interfaces.MainActivityPresenter;
-import stacko.ste.mvpcleanarch.interfaces.MainActivityView;
-import stacko.ste.mvpcleanarch.interfaces.PersistentStorageProxy;
-import stacko.ste.mvpcleanarch.model.entities.ItemDbEntity;
-import stacko.ste.mvpcleanarch.presenter.MainActivityPresenterImpl;
+import stacko.ste.mvpcleanarch.presentation.interfaces.MainActivityPresenter;
+import stacko.ste.mvpcleanarch.presentation.interfaces.MainActivityView;
+import stacko.ste.mvpcleanarch.data.persistent.PersistentStorageProxy;
+import stacko.ste.mvpcleanarch.domain.model.entities.ItemDbEntity;
+import stacko.ste.mvpcleanarch.presentation.MainActivityPresenterImpl;
 import io.reactivex.Flowable;
 import io.reactivex.Scheduler;
 import io.reactivex.android.plugins.RxAndroidPlugins;

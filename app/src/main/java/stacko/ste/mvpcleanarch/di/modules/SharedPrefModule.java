@@ -9,8 +9,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import stacko.ste.mvpcleanarch.interfaces.PersistentStorageProxy;
-import stacko.ste.mvpcleanarch.util.PersistentStorageProxyImpl;
+import stacko.ste.mvpcleanarch.data.persistent.PersistentStorageProxy;
+import stacko.ste.mvpcleanarch.data.persistent.PersistentStorageProxyImpl;
 
 
 @Module

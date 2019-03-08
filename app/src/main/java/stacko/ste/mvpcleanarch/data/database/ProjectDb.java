@@ -3,7 +3,7 @@ package stacko.ste.mvpcleanarch.data.database;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.RoomDatabase;
 
-import stacko.ste.mvpcleanarch.model.entities.ItemDbEntity;
+import stacko.ste.mvpcleanarch.domain.model.entities.ItemDbEntity;
 
 
 @Database(entities = {ItemDbEntity.class}, version = 1)

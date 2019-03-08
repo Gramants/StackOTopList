@@ -6,8 +6,8 @@ import stacko.ste.mvpcleanarch.di.modules.PresenterDetailModule;
 import stacko.ste.mvpcleanarch.di.modules.PresenterDetailViewModule;
 import stacko.ste.mvpcleanarch.di.modules.PresenterModule;
 import stacko.ste.mvpcleanarch.di.modules.PresenterViewModule;
-import stacko.ste.mvpcleanarch.view.DetailActivity;
-import stacko.ste.mvpcleanarch.view.MainActivity;
+import stacko.ste.mvpcleanarch.presentation.view.DetailActivity;
+import stacko.ste.mvpcleanarch.presentation.view.MainActivity;
 
 
 @Module

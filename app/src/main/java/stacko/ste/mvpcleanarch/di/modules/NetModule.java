@@ -16,8 +16,8 @@ import javax.net.ssl.X509TrustManager;
 
 import dagger.Module;
 import dagger.Provides;
-import stacko.ste.mvpcleanarch.interfaces.Api;
-import stacko.ste.mvpcleanarch.util.Config;
+import stacko.ste.mvpcleanarch.data.api.Api;
+import stacko.ste.mvpcleanarch.base.Config;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;

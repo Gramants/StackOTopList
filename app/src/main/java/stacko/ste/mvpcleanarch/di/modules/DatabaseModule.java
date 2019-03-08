@@ -9,7 +9,7 @@ import dagger.Module;
 import dagger.Provides;
 import stacko.ste.mvpcleanarch.data.database.ProjectDb;
 import stacko.ste.mvpcleanarch.data.database.UsersDao;
-import stacko.ste.mvpcleanarch.util.Config;
+import stacko.ste.mvpcleanarch.base.Config;
 
 @Module
 public class DatabaseModule {

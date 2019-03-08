@@ -2,10 +2,10 @@ package stacko.ste.mvpcleanarch.di.modules;
 
 import dagger.Module;
 import dagger.Provides;
-import stacko.ste.mvpcleanarch.interfaces.Interactor;
-import stacko.ste.mvpcleanarch.interfaces.MainActivityView;
-import stacko.ste.mvpcleanarch.interfaces.PersistentStorageProxy;
-import stacko.ste.mvpcleanarch.presenter.MainActivityPresenterImpl;
+import stacko.ste.mvpcleanarch.domain.Interactor;
+import stacko.ste.mvpcleanarch.presentation.interfaces.MainActivityView;
+import stacko.ste.mvpcleanarch.data.persistent.PersistentStorageProxy;
+import stacko.ste.mvpcleanarch.presentation.MainActivityPresenterImpl;
 
 @Module
 public class PresenterModule {

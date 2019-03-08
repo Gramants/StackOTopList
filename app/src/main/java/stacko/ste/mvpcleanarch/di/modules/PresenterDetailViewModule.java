@@ -2,8 +2,8 @@ package stacko.ste.mvpcleanarch.di.modules;
 
 import dagger.Binds;
 import dagger.Module;
-import stacko.ste.mvpcleanarch.interfaces.DetailActivityView;
-import stacko.ste.mvpcleanarch.view.DetailActivity;
+import stacko.ste.mvpcleanarch.presentation.interfaces.DetailActivityView;
+import stacko.ste.mvpcleanarch.presentation.view.DetailActivity;
 
 @Module
 public abstract class PresenterDetailViewModule {

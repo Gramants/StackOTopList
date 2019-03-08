@@ -5,8 +5,8 @@ import dagger.Provides;
 import stacko.ste.mvpcleanarch.data.database.ProjectDb;
 import stacko.ste.mvpcleanarch.data.database.UsersDao;
 import stacko.ste.mvpcleanarch.domain.InteractorImpl;
-import stacko.ste.mvpcleanarch.interfaces.Api;
-import stacko.ste.mvpcleanarch.interfaces.Interactor;
+import stacko.ste.mvpcleanarch.data.api.Api;
+import stacko.ste.mvpcleanarch.domain.Interactor;
 
 @Module
 public class InteractorModule {

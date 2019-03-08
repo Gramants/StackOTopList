@@ -17,7 +17,7 @@ import java.util.List;
 
 import stacko.ste.mvpcleanarch.data.database.ProjectDb;
 import stacko.ste.mvpcleanarch.data.database.UsersDao;
-import stacko.ste.mvpcleanarch.model.entities.ItemDbEntity;
+import stacko.ste.mvpcleanarch.domain.model.entities.ItemDbEntity;
 
 @RunWith(AndroidJUnit4.class)
 public class UsersDaoTest {

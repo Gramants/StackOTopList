@@ -8,8 +8,8 @@ import android.arch.persistence.room.Transaction;
 
 import java.util.List;
 
-import stacko.ste.mvpcleanarch.model.entities.ItemDbEntity;
-import stacko.ste.mvpcleanarch.util.Config;
+import stacko.ste.mvpcleanarch.domain.model.entities.ItemDbEntity;
+import stacko.ste.mvpcleanarch.base.Config;
 import io.reactivex.Flowable;
 
 

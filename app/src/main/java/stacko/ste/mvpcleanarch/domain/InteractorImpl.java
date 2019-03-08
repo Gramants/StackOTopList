@@ -16,12 +16,11 @@ import stacko.ste.mvpcleanarch.data.database.ProjectDb;
 import stacko.ste.mvpcleanarch.data.database.UpdateRecord;
 import stacko.ste.mvpcleanarch.data.database.UpdateRecords;
 import stacko.ste.mvpcleanarch.data.database.UsersDao;
-import stacko.ste.mvpcleanarch.interfaces.Api;
-import stacko.ste.mvpcleanarch.interfaces.Interactor;
-import stacko.ste.mvpcleanarch.model.Item;
-import stacko.ste.mvpcleanarch.model.TopUsersResponse;
-import stacko.ste.mvpcleanarch.model.entities.ItemDbEntity;
-import stacko.ste.mvpcleanarch.util.Config;
+import stacko.ste.mvpcleanarch.data.api.Api;
+import stacko.ste.mvpcleanarch.domain.model.Item;
+import stacko.ste.mvpcleanarch.domain.model.TopUsersResponse;
+import stacko.ste.mvpcleanarch.domain.model.entities.ItemDbEntity;
+import stacko.ste.mvpcleanarch.base.Config;
 
 
 public class InteractorImpl implements Interactor {
